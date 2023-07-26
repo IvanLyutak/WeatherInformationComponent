@@ -1,0 +1,221 @@
+.view {
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 3px rgba(0 ,0,0,0.3);
+    border-radius: 20px;
+
+    transition: height .2s, width .2s;
+    overflow: hidden;
+
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.view.is-view-open {
+    height: 450px;
+    width: 400px;
+}
+
+.view .weather {
+    width: 100%;
+    height: 10%;
+    font-size: 20pt;
+    font-weight: 500;
+    display: table;
+}
+
+.view .weather div {
+    vertical-align: middle;
+    height: 100%;
+    display: table-cell;
+}
+
+.view .line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(195, 195, 195);
+}
+
+.view .district {
+    width: 100%;
+    height: 8%;
+    font-size: 15pt;
+    font-weight: 400;
+    display: table;
+}
+
+.view .district div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.view .date {
+    width: 100%;
+    height: 8%;
+    font-size: 12pt;
+    font-weight: 300;
+    display: table;
+}
+
+.view .date div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.view .mainInformation {
+    width: 100%;
+    height: 22%;
+}
+
+.view .mainInformation .temp {
+    width: 25%;
+    height: 100%;
+
+    font-size: 22pt;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.view .mainInformation .temp .tempInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.view .mainInformation .temp .tempInner div {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.view .mainInformation .imgWeather {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 20%;
+}
+
+.view .mainInformation .container {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 55%;
+}
+
+.view .mainInformation .container .description {
+    font-size: 15pt;
+    font-weight: 500;
+    text-align: left;
+    height: 60%;
+    margin-left: 5%;
+    display: table;
+}
+
+.view .mainInformation .container .description div {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.view .mainInformation .container .description div::first-letter {
+    text-transform: capitalize;
+}
+
+.view .mainInformation .container .feels_like {
+    font-size: 12pt;
+    font-weight: 300;
+    text-align: left;
+    height: 40%;
+    margin-left: 5%;
+}
+
+.view .additionalInformation {
+    width: 90%;
+    margin-left: 5%;
+    height: 15%;
+    display: table;
+}
+
+.view .additionalInformation .wind {
+    width: 25%;
+    display: table-cell;
+}
+
+.view .additionalInformation .humidity {
+    width: 20%;
+    display: table-cell;
+}
+
+.view .additionalInformation .pressure {
+    width: 45%;
+    display: table-cell;
+}
+
+.view .additionalInformation img {
+    display: table-cell;
+    width: 25px;
+    margin-left: 10%;
+    float: left;
+    height: 100%;
+}
+
+.view .additionalInformation .text {
+    display: table;
+    float: left;
+    width: calc( 85% - 25px );
+    margin-left: 5%;
+    height: 100%;
+}
+
+.view .additionalInformation .text div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 12pt;
+}
+
+.view .sunTimes {
+    width: 100%;
+    height: calc( 37% - 1px );
+}
+
+.view .sunTimes .daylightHours .title {
+    margin-top: 10px;
+    font-size: 12pt;
+}
+
+.view .sunTimes .daylightHours .text {
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.view .sunTimes .data {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.view .sunTimes .data .time {
+    display: inline-block;
+    width: calc( 50% - 50px );
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.view .sunTimes .data img {
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+}
+
+.view .errorMessage {
+    margin-top: 50%;
+}
+
+@media screen and (max-width: 440px) {
+    .view {
+        width: 100%;
+    }
+}
